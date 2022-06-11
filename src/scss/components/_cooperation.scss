@@ -1,0 +1,93 @@
+.cooperation {
+    font-family: "Gotham";
+    padding: 180px 0 138px 0;
+
+    &__title {
+        margin-bottom: 64px;
+        max-width: 577px;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__arrow {
+        background-color: transparent;
+        svg {
+            width: 12px;
+            height: 28px;
+            fill: transparent;
+            stroke: #A960AB;
+            stroke-width: 2px;
+        }
+
+        position: absolute;
+        top: 41%;
+        z-index: 10;
+        overflow: visible;
+
+        &--prev {
+            left: -52px;
+        }
+
+        &--next {
+            right: -52px;
+        }
+    }
+
+    &__slider {
+        padding: 0 0 90px;
+        
+        .swiper-slide {
+            max-width: 454px;
+            background: #F8F9F9;
+            height: auto;
+            max-height: 570px;
+        }
+
+        .swiper-pagination {
+            bottom: 47px;
+        }
+
+        .swiper-pagination-bullet {
+            background: gray;
+            margin: 0 12px !important;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #A960AB;
+        }
+
+        
+    }
+
+    &__img {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 24px 34px 67px 40px;
+    }
+
+    &__caption {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 22px;
+        color: #535670;
+    }
+}

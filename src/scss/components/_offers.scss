@@ -1,0 +1,73 @@
+.offers {
+    font-family: 'Gotham';
+    padding-bottom: 150px;
+    
+    &__subtitle {
+        margin-bottom: 9px;
+        font-family: "Inter";
+    }
+
+    &__title {
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        font-family: 'Inter';
+    }
+
+    &__inner {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 64px 40px;
+        margin-bottom: 65px;
+    }
+
+    &__item {
+        grid-column: 4 span;
+    }
+
+    &__caption {
+        background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 350;
+        font-size: 26px;
+        line-height: 32px;
+        margin-top: 15px;
+    }
+
+    &__desc {
+        font-weight: 325;
+        font-size: 18px;
+        line-height: 22px;
+        color: #535670;
+        margin-top: 10px;
+    }
+
+    &__all {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #A960AB;
+        position: relative;
+        
+        &::after {
+            content: "";
+            background: url("../img/svg/arrow-all.svg") no-repeat;
+            position: absolute;
+            top: 0px;
+            right: -70px;
+            width: 45px;
+            height: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                right: -85px;
+            }
+        }
+    }
+}

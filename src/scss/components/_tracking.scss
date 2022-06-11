@@ -1,0 +1,55 @@
+.tracking {
+    background: #E6E8EF;
+    position: relative;
+    padding: 80px 0 110px 0;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 70px;
+        margin-bottom: 178px;
+    }
+
+    &__desc {
+        max-width: 670px;
+        font-weight: 325;
+        font-size: 20px;
+        line-height: 28px;
+        color: #535670;
+        margin-top: 10px;
+    }
+
+    &__img {
+        position: absolute;
+        top: -180px;
+        right: 0;
+        max-width: 940px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 10px;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__info {
+        max-width: 280px;
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 22px;
+        color: #75788D;
+    }
+}

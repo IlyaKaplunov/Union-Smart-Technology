@@ -1,0 +1,71 @@
+.team {
+    padding: 181px 0 218px 0;
+    font-family: "Gotham";
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 78px 44px;
+    }
+
+    &__item {
+        grid-column: 3 span;
+        &--big {
+            grid-column: 6 span;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 64px;
+        color: #03115F;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        color: #535670;
+        font-weight: 325;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    &__photo {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 32px;
+            height: 32px;
+            background: url("../img/team/social.png") center no-repeat;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #03115F;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__prof {
+        text-align: center;
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 22px;
+        color: #535670;
+        text-align: center;
+        margin-top: 4px;
+        max-width: 282px;
+        margin: 0 auto;
+    }
+}
+

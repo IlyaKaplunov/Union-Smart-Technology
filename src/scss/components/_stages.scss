@@ -1,0 +1,103 @@
+.stages {
+    font-family: "Gotham";
+    padding: 110px 0 179px 0;
+    max-width: 1360px;
+    margin: 0 auto;
+
+    &__point {
+        display: flex;
+        gap: 40px;
+
+        &:not(:last-child) {
+            margin-bottom: 109px;
+        }
+    }
+
+    &__num {
+        font-weight: 700;
+        font-size: 200px;
+        line-height: 240px;
+        color: #DDDDE2;
+        text-align: center;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 64px;
+        background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        color: #535670;
+        font-weight: 325;
+        font-size: 26px;
+        line-height: 32px;
+        max-width: 697px;
+
+        span {
+            color: #75788D;
+            display: block;
+            margin-top: 40px;
+        }
+    }
+
+    &__clients {
+        display: flex;
+        margin-top: 34px;
+    }
+
+    &__client {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__bottom {
+        margin-top: 24px;
+    }
+
+    &__road {
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 20px;
+        color: #75788D;
+        max-width: 242px;
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #A960AB;
+        margin-top: 15px;
+        position: relative;
+        
+        &::after {
+            content: "";
+            background: url("../img/svg/arrow-all.svg") no-repeat;
+            position: absolute;
+            top: 0px;
+            right: -70px;
+            width: 45px;
+            height: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                right: -85px;
+            }
+        }
+    }
+}
+

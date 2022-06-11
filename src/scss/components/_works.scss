@@ -1,0 +1,35 @@
+.works {
+    padding: 179px 0 0px 0;
+    font-family: "Gotham";
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 96px 40px;
+    }
+
+    &__img {
+        margin-bottom: 15px;
+        overflow: hidden;
+        
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__caption {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 32px;
+        color: #35417F;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-weight: 325;
+        font-size: 18px;
+        line-height: 22px;
+        color: #535670;
+    }
+}
+

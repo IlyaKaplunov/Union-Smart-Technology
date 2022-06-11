@@ -1,0 +1,21 @@
+.join {
+    padding: 348px 0 252px 0;
+    background: url("../img/join/bg.jpg") center / cover no-repeat;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__subtitle {
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        margin-bottom: 64px;
+    }
+
+    &__btn {
+    }
+}
+

@@ -1,0 +1,134 @@
+.vacancies {
+    padding: 180px 0 175px 0;
+    max-width: 1188px;
+    margin: 0 auto;
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        max-width: 821px;
+        margin-bottom: 36px;
+    }
+
+    &__item {
+        border-bottom: 2px solid #DDDDE2;
+    }
+
+    &__top {
+        position: relative;
+        padding: 40px 0;
+        cursor: pointer;
+        display: flex;
+
+        .vacancies__conditions {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 37%;
+            right: 34px;
+            width: 15px;
+            height: 30px;
+            background: url("../img/svg/arrow-open.svg") no-repeat;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.active {
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__subtitle {
+        color: #535670;
+        font-weight: 325;
+        font-size: 26px;
+        line-height: 32px;
+        margin-right: 10px;
+    }
+
+    &__body {
+        max-width: 946px;
+        margin: 0 auto;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+            max-height: auto;
+        }
+    }
+
+    &__row {
+        ul {
+            margin-bottom: 40px;
+        }
+        
+        li {
+            font-weight: 325;
+            font-size: 18px;
+            line-height: 22px;
+            color: #535670;
+            position: relative;
+            padding-left: 18px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 9px;
+                left: 0;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background: #1E74EC;
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__caption {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #35417F;
+        margin-bottom: 12px;
+    }
+
+    &__conditions {
+        display: flex;
+        margin-bottom: 40px;
+
+        span {
+            font-weight: 325;
+            font-size: 13px;
+            line-height: 20px;
+            background: #E6E8EF;
+            border-radius: 4px;
+            color: #989AA9;
+            padding: 6px 18px;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        padding-bottom: 40px;
+    }
+
+    &__link {
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+}

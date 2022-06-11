@@ -1,0 +1,41 @@
+.equipment {
+    padding-bottom: 361px;
+
+    &__title {
+        margin-bottom: 64px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-weight: 325;
+        font-size: 20px;
+        line-height: 28px;
+        color: #75788D;
+        max-width: 453px;
+        margin-bottom: 24px;
+    }
+
+    &__photo {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+

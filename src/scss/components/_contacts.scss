@@ -1,0 +1,181 @@
+.contacts {
+    font-family: "Gotham";
+    padding-top: 110px;
+    padding-bottom: 180px;
+    background: url("../img/contacts/bg.jpg") no-repeat;
+    background-size: 100% 560px;
+
+    &__subtitle {
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__inner {
+        background: #EEEFF1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 110px 123px 110px 122px;
+    }
+
+    &__content {
+        background: #003e97;
+        max-width: 578px;
+        padding: 64px 40px 48px;
+        color: #EEEFF1;
+    }
+
+    &__caption {
+        font-weight: 325;
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+
+    &__desc {
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 22px;
+        border-bottom: 2px solid rgba(#DDDDE2, 0.2);
+        padding-bottom: 7px;
+    }
+
+    &__country {
+        display: flex;
+        gap: 38px;
+        padding-top: 26px;
+        border-bottom: 2px solid rgba(#DDDDE2, 0.2);
+
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        &-links {
+            padding-bottom: 22px;
+        } 
+
+        &-link {
+            font-weight: 325;
+            font-size: 16px;
+            line-height: 20px;
+            color: #EEEFF1;
+            display: block;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        padding-top: 40px;
+        
+        &-link {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+            svg {
+                width: 32px;
+                height: 32px;
+                fill: #fff;
+            }
+        }
+    }
+
+    &__form {
+        max-width: 454px;
+
+        &-title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            color: #03115F;
+            margin-bottom: 27px;
+        }
+
+        &-desc {
+            font-weight: 325;
+            font-size: 18px;
+            line-height: 22px;
+            color: #535670;
+            margin-bottom: 15px;
+        }
+
+        &-field {
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &-input,
+        &-textarea {
+            display: block;
+            width: 100%;
+            background: #FFFFFF;
+            padding: 0 16px;
+            border-radius: 4px;
+
+            &::placeholder {
+                font-weight: 325;
+                font-size: 16px;
+                line-height: 20px;
+                color: #75788D;
+            }
+        }
+
+        &-input {
+            height: 48px;
+        }
+
+        &-textarea {
+            padding: 16px;
+            height: 96px;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 20px;
+            color: #535670;
+            font-family: "Roboto";
+            background: url("../img/svg/star.svg") left 1px top 2px no-repeat;
+            padding-left: 14px;
+            word-spacing: 2.4px;
+            margin-bottom: 4px;
+            display: inline-block;
+        }
+
+        &-bottom {
+            display: flex;
+            gap: 10px;
+        }
+
+        &-btn {
+            min-width: 206px;
+        }
+
+        &-politics {
+            display: block;
+            font-weight: 325;
+            font-size: 11px;
+            line-height: 20px;
+            color: #989AA9;
+            padding-top: 4px;
+
+            a {
+                text-decoration-line: underline;
+                color: #A960AB;
+            }
+        }
+    }
+}
+

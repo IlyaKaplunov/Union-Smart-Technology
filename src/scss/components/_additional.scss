@@ -1,0 +1,54 @@
+.additional {
+    font-family: "Gotham";
+    background: #E6E8EF;
+    padding: 110px 0 180px 0;
+
+    &__title {
+        max-width: 577px;
+        margin-bottom: 64px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }   
+
+    &__item {
+        display: flex;
+    }
+
+    &__icon {
+        background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+        min-width: 160px;
+        min-height: 214px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 80px;
+            height: 80px;
+            fill: #fff;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        background: #FFFFFF;
+        font-weight: 325;
+        font-size: 26px;
+        line-height: 32px;
+        color: #35417F;
+        padding: 61px 47px 61px 40px;
+        min-width: 293px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            max-width: 206px;
+        }
+    }
+}

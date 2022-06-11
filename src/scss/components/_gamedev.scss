@@ -1,0 +1,77 @@
+
+.gamedev {
+    padding: 180px 0;
+
+    &__header {
+        max-width: 670px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-bottom: 64px;
+    }
+
+    &__inner {
+        margin: 0 -15px;
+    }
+
+    &__slider {
+        padding: 0 15px;
+
+        .swiper-pagination {
+            bottom: 0;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        /* @media (max-width: 600px) {
+            display: initial;
+        } */
+    }
+
+    &__slide {
+        background: #EEEFF1;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    &__img {
+        width: 100%;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__content {
+        padding: 24px 34px 31px 40px;
+    }
+
+    &__caption {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 22px;
+        text-overflow: ellipsis;
+        color: #535670;
+    }
+}

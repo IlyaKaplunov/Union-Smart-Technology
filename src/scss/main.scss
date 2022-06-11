@@ -1,0 +1,45 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// Partials (Common)
+@import "./components/header";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/page-home";
+
+// Partials (Home page)
+@import "./components/home";
+@import "./components/about";
+@import "./components/offers";
+@import "./components/projects";
+@import "./components/advantages";
+@import "./components/clients";
+@import "./components/faq";
+
+// Partials (Team page)
+@import "./components/team";
+@import "./components/join";
+
+// Partials (Our projects)
+@import "./components/cooperation";
+@import "./components/services";
+@import "./components/stages";
+@import "./components/additional";
+@import "./components/user-form";
+
+// Partials (Portfolio)
+@import "./components/works";
+@import "./components/contact-us";
+
+// Partials (Career)
+@import "./components/vacancies";
+
+// Partials (Vroom-games)
+@import "./components/vroom-desc";
+@import "./components/equipment";
+@import "./components/tracking";
+@import "./components/gamedev";
+@import "./components/also";

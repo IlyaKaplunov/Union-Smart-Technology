@@ -1,0 +1,94 @@
+.projects {
+    font-family: "Gotham";
+    padding-top: 143px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 640px;
+        background-color: #E6E8EF;
+        z-index: -1;
+    }
+
+    &__header {
+        margin: 0 auto 63px;
+        text-align: center;
+        
+    }
+
+    &__subtitle {
+        font-family: 'Gotham';
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        margin: 0 auto;
+        font-family: 'Gotham';
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 53px 40px;
+        margin-bottom: 80px;
+    }
+
+    &__item {
+        grid-column: 3 span;
+
+        &--big {
+            grid-column: 6 span;
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        
+        img {
+            max-width: 100%;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__caption {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 32px;
+        color: #35417F;
+        margin-top: 5px;
+    }
+
+    &__desc {
+        font-weight: 325;
+        font-size: 18px;
+        line-height: 22px;
+        color: #535670;
+        margin-top: 4px;
+    }
+
+    &__buttons {
+        justify-content: center;
+    }
+
+    &__btn {
+       padding: 12.5px 30px;
+       
+        +.btn {
+            margin-left: 25px;
+        }
+    }
+}
+

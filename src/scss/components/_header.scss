@@ -1,0 +1,129 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 10px;
+
+    &__inner {
+        @include flex-all-sb;
+    }
+
+    &__logo {
+        @include flex-v-center;
+    }
+
+    &__text {
+        margin-left: 15px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #DDDDE2;
+        font-family: "Inter";
+        display: block;
+    }
+
+    &__subtitle {
+        font-size: 15px;
+        line-height: 24px;
+        font-family: "Inter";
+        color: #989AA9;
+    }
+
+    &__menu {
+        @include flex-v-center;
+    }
+
+    &__list {
+        @include flex-v-center;
+        margin-right: 24px;
+
+        li {
+            
+            &:not(:last-child) {
+                position: relative;
+                margin-right: 32px;
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5px;
+                    right: -16px;
+                    width: 2px;
+                    height: 15px;
+                    background-color: #989AA9;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 325;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-family: "Gotham";
+        color: #DDDDE2;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            color: #fff;
+
+            &::after {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &__lang {
+        position: relative;
+        margin-right: 24px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -14px;
+            right: -27px;
+            width: 2px;
+            height: 50px;
+            background-color: #989AA9;
+        }
+    }
+
+    &__search {
+        margin-left: 26px;
+        svg {
+            width: 28px;
+            height: 28px;
+            fill: transparent;
+            stroke: #989AA9;
+            stroke-width: 2px;
+            display: block;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            svg {
+                stroke: #fff;
+            }
+        }
+    }
+}
+

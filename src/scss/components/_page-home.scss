@@ -1,0 +1,66 @@
+.page-home {
+    padding-bottom: 156px;
+    padding-top: 210px;
+
+    &__subtitle {
+        font-weight: 325;
+        font-size: 26px;
+        line-height: 32px;
+        color: #CDCFDF;
+        font-family: 'Gotham';
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 62px;
+        line-height: 68px;
+        color: #EEEFF1;
+        font-family: 'Gotham';
+        margin-bottom: 15px;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #DDDDE2;
+        max-width: 577px;
+        font-family: 'Rubik';
+    }
+
+    &__btn {
+        margin-top: 64px;
+    }
+
+    &--team {
+        background: url("../img/page-home/bg-team.jpg") center / cover no-repeat;
+    }
+
+    &--projects {
+        background: url("../img/page-home/bg-projects.jpg") center / cover no-repeat;
+    }
+
+    &--portfolio {
+        background: url("../img/page-home/bg-portfolio.jpg") center / cover no-repeat;
+    }
+
+    &--career {
+        background: url("../img/page-home/bg-career.jpg") center / cover no-repeat;
+    }
+
+    &--contacts {
+        padding-top: 209px;
+        background: url("../img/page-home/bg-contacts.jpg") no-repeat;
+        background-size: 100% 660px;
+
+        .home-contacts__title {
+            margin-bottom: 80px;
+        }
+    }
+
+    &--vroom {
+        background: url("../img/page-home/bg-vroom.jpg") center / cover no-repeat;
+    }
+}
+
