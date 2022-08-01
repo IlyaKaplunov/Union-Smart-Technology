@@ -44,15 +44,44 @@
                         <a href="contact-page.html" class="header__link">Контакты</a>
                     </li>
                 </ul>
-                <a href="#" class="header__lang">
-                    <img src="img/svg/lang-en.svg" alt="EN">
-                </a>
-                <a href="#" class="header__search">
-                    <svg>
-                        <use xlink:href="img/sprite.svg#search"></use>
-                    </svg>
-                </a>
+                <div class="header__left">
+                    <a href="#" class="header__lang">
+                        <img src="img/svg/lang-en.svg" alt="EN">
+                    </a>
+                    <a href="#" class="header__search">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#search"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__social">
+                    <a href="#" class="header__social-link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#linked-in"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="header__social-link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#google"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="header__social-link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="header__social-link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#dribble"></use>
+                        </svg>
+                    </a>
+                </div>
             </nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
 </header>
@@ -180,6 +209,7 @@
                     <div class="stages__bottom">
                         <p class="stages__road">Можем пройти весь путь или выполнить только этот этап.</p>
                         <a href="#" class="stages__link">Начать работу</a>
+                        <a href="#" class="stages__link stages__link--mob">Заказать проект</a>
                     </div>
                 </div>
             </div>
@@ -199,6 +229,7 @@
                     <div class="stages__bottom">
                         <p class="stages__road">Можем пройти весь путь или выполнить только этот этап.</p>
                         <a href="#" class="stages__link">Начать работу</a>
+                        <a href="#" class="stages__link stages__link--mob">Заказать проект</a>
                     </div>
                 </div>
             </div>
@@ -221,6 +252,7 @@
                     <div class="stages__bottom">
                         <p class="stages__road">Можем пройти весь путь или выполнить только этот этап.</p>
                         <a href="#" class="stages__link">Начать работу</a>
+                        <a href="#" class="stages__link stages__link--mob">Заказать проект</a>
                     </div>
                 </div>
             </div>
@@ -246,6 +278,7 @@
                     <div class="stages__bottom">
                         <p class="stages__road">Можем пройти весь путь или выполнить только этот этап.</p>
                         <a href="#" class="stages__link">Начать работу</a>
+                        <a href="#" class="stages__link stages__link--mob">Заказать проект</a>
                     </div>
                 </div>
             </div>
@@ -265,6 +298,7 @@
                     <div class="stages__bottom">
                         <p class="stages__road">Можем пройти весь путь или выполнить только этот этап.</p>
                         <a href="#" class="stages__link">Начать работу</a>
+                        <a href="#" class="stages__link stages__link--mob">Заказать проект</a>
                     </div>
                 </div>
             </div>
@@ -281,6 +315,7 @@
                     <div class="stages__bottom">
                         <p class="stages__road">Можем пройти весь путь или выполнить только этот этап.</p>
                         <a href="#" class="stages__link">Начать работу</a>
+                        <a href="#" class="stages__link stages__link--mob">Заказать проект</a>
                     </div>
                 </div>
             </div>
@@ -356,7 +391,7 @@
 </div>
       <div class="user-form user-form--project">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header user-form__header">
             <h3 class="user-form__subtitle section-subtitle section-subtitle_w">Обсуждаем</h3>
             <h2 class="user-form__title section-title section-title_w">Ваш проект</h2>
             <p class="user-form__text section-text">Если вы хотите стать частью нашей команды, оставьте свои контакты и мы свяжемся с вами!</p>
@@ -388,7 +423,10 @@
                     <p class="user-form__desc">Загрузите сюда свое ТЗ и / или оформите бриф</p>
                 </div>
                 <div class="user-form__column">
-                    <button class="user-form__brief btn btn--stroke">Оформить бриф</button>
+                    <label for="" class="user-form__brief">
+                        <button class="user-form__btn btn btn--stroke">Оформить бриф</button>
+                        <span>Оформление брифа может занять 15-25 минут</span>
+                    </label>
                     <label for="" class="user-form__field">
                         <input type="tel" class="user-form__input" placeholder="Ссылка на Техническое задание">
                     </label>
@@ -483,6 +521,33 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="footer-social">
+                    <a href="#" class="footer-social__link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#linked-in"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#google"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#dribble"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-social__link">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#insta"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="footer__bottom">
                 <div class="footer__dev">Разработка: студия ЯР</div>
