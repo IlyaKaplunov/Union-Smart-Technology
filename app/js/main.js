@@ -9,9 +9,15 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/accordions */ "./src/js/components/accordions.js");
-/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordions */ "./src/js/components/accordions.js");
+/* harmony import */ var _components_accordions__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_accordions__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
+/* harmony import */ var _components_showTeam__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/showTeam */ "./src/js/components/showTeam.js");
+/* harmony import */ var _components_showTeam__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_showTeam__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
@@ -180,6 +186,63 @@ vacanciesTops.forEach(function (vacanciesTop) {
 
 /***/ }),
 
+/***/ "./src/js/components/burger.js":
+/*!*************************************!*\
+  !*** ./src/js/components/burger.js ***!
+  \*************************************/
+/***/ (() => {
+
+var burger = document.querySelector('.burger');
+
+if (burger) {
+  var menu = document.querySelector('.header__menu');
+  burger.addEventListener("click", function (e) {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+    document.body.classList.toggle('lock');
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/showTeam.js":
+/*!***************************************!*\
+  !*** ./src/js/components/showTeam.js ***!
+  \***************************************/
+/***/ (() => {
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var showButton = document.querySelector(".team__show");
+var itemNone = document.querySelectorAll(".team__item--none");
+showButton.addEventListener("click", function (e) {
+  var _iterator = _createForOfIteratorHelper(itemNone),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var item = _step.value;
+      item.classList.toggle("_block");
+
+      if (item.classList.contains("_block")) {
+        showButton.innerHTML = "\u0421\u0432\u0435\u0440\u043D\u0443\u0442\u044C";
+      } else {
+        showButton.innerHTML = "\u0412\u0441\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u0430";
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/sliders.js":
 /*!**************************************!*\
   !*** ./src/js/components/sliders.js ***!
@@ -189,11 +252,12 @@ vacanciesTops.forEach(function (vacanciesTop) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* import { auto } from "@popperjs/core"; */
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.FreeMode]);
 var cooperationSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".cooperation__slider", {
   speed: 1000,
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 40,
   loop: true,
   pagination: {
@@ -204,15 +268,27 @@ var cooperationSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".coo
   navigation: {
     nextEl: '.cooperation__arrow--next',
     prevEl: '.cooperation__arrow--prev'
+  },
+  breakpoints: {
+    920: {
+      slidesPerView: 3
+    },
+    768: {
+      slidesPerView: 2
+    },
+    576: {
+      slidesPerView: 1
+    }
   }
 });
 var mobSlider = document.querySelector('.gamedev__slider');
 var myMobSwiper;
 
 function mobileSlider() {
-  if (window.innerWidth <= 600 && mobSlider.dataset.mobile == 'false') {
+  if (window.innerWidth <= 768 && mobSlider.dataset.mobile == 'false') {
     myMobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider, {
       slidesPerView: 1,
+      spaceBetween: 40,
       freeMode: true,
       slideClass: 'gamedev__slide',
       pagination: {
@@ -224,7 +300,7 @@ function mobileSlider() {
     mobSlider.dataset.mobile = 'true';
   }
 
-  if (window.innerWidth > 600) {
+  if (window.innerWidth > 768) {
     mobSlider.dataset.mobile = 'false';
 
     if (mobSlider.classList.contains('swiper-initialized')) {
@@ -236,6 +312,38 @@ function mobileSlider() {
 mobileSlider();
 window.addEventListener('resize', function () {
   mobileSlider();
+});
+var mobSlider2 = document.querySelector('.office__slider');
+var myMobSwiper2;
+
+function mobileSlider2() {
+  if (window.innerWidth <= 768 && mobSlider2.dataset.mobile == 'false') {
+    myMobSwiper2 = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](mobSlider2, {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      freeMode: true,
+      slideClass: 'office__img',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets'
+      }
+    });
+    mobSlider2.dataset.mobile = 'true';
+  }
+
+  if (window.innerWidth > 768) {
+    mobSlider2.dataset.mobile = 'false';
+
+    if (mobSlider2.classList.contains('swiper-initialized')) {
+      myMobSwiper2.destroy();
+    }
+  }
+}
+
+mobileSlider2();
+window.addEventListener('resize', function () {
+  mobileSlider2();
 });
 
 /***/ }),

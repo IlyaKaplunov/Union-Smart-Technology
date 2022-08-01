@@ -1,0 +1,118 @@
+.office {
+    padding-bottom: 180px;
+
+    @include mobile {
+        padding-bottom: 80px;
+    }
+
+    &__top {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 40px;
+
+        @include notebook {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+        svg {
+            width: 64px;
+            height: 64px;
+            fill: transparent;
+            stroke: #fff;
+            stroke-width: 2px;
+            object-fit: cover;
+            display: block;
+
+            @include mobile {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+
+        @include minidesk {
+            font-size: 30px;
+            line-height: 35px;
+            margin-bottom: 10px;
+        }
+
+        @include mobile {
+            font-size: 30px;
+            line-height: 32px;
+        }
+    }
+
+    &__desc {
+        max-width: 660px;
+
+        @include minidesk {
+            font-size: 18px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__images {
+        margin: 0 -15px;
+    }
+    
+    &__slider {
+        padding: 0 15px 40px;
+    
+        .swiper-pagination {
+            bottom: 0px;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #A960AB;
+            margin: 0 12px !important;
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 30px;
+        height: auto;
+
+        @include tablet {
+            column-gap: 0;
+        }
+    }
+
+    &__img {
+        grid-column: 3 span;
+        
+        &--big {
+            grid-column: 6 span;
+        }
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}

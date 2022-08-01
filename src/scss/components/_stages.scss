@@ -4,12 +4,20 @@
     max-width: 1360px;
     margin: 0 auto;
 
+    @include  mobile {
+        padding: 40px 0 102px 0;
+    }
+
     &__point {
         display: flex;
         gap: 40px;
 
         &:not(:last-child) {
             margin-bottom: 109px;
+
+            @include mobile {
+                margin-bottom: 62px;
+            }
         }
     }
 
@@ -19,6 +27,14 @@
         line-height: 240px;
         color: #DDDDE2;
         text-align: center;
+
+        @include notebook {
+            font-size: 120px;
+        }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__heading {
@@ -30,6 +46,17 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin-bottom: 16px;
+
+        @include notebook {
+            font-size: 30px;
+            margin-bottom: 0px;
+        }
+
+        @include mobile {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 
     &__text {
@@ -39,10 +66,27 @@
         line-height: 32px;
         max-width: 697px;
 
+        @include notebook {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: "Rubik";
+            max-width: 300px;
+            margin-top: 8px;
+        }
+
         span {
             color: #75788D;
             display: block;
             margin-top: 40px;
+
+            @include notebook {
+                margin-top: 20px;
+            }
         }
     }
 
@@ -52,17 +96,28 @@
     }
 
     &__client {
+        display: block;
         &:not(:last-child) {
             margin-right: 40px;
-        }
-    }
 
-    &__img {
-        max-width: 100%;
+            @include mobile {
+                margin-right: 24px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &__bottom {
         margin-top: 24px;
+
+        @include mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__road {
@@ -72,6 +127,14 @@
         color: #75788D;
         max-width: 242px;
         margin-bottom: 15px;
+
+        @include mobile {
+            font-family: 'Roboto';
+            max-width: 186px;
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 0;
+        }
     }
 
     &__link {
@@ -81,6 +144,27 @@
         color: #A960AB;
         margin-top: 15px;
         position: relative;
+        display: block;
+        
+        &--mob {
+            display: none;
+            @include mobile {
+                display: block;
+            }
+        }
+
+        &:first-child {
+            @include mobile {
+                display: none;
+            }
+        }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 16px;
+            color: #1E74EC;
+            margin-top: 0;
+        }
         
         &::after {
             content: "";
@@ -91,6 +175,10 @@
             width: 45px;
             height: 16px;
             transition: all 0.3s ease-in-out;
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &:hover {

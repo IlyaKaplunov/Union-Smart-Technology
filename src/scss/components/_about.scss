@@ -1,5 +1,30 @@
 .about {
     padding: 180px 0;
+    position: relative;
+
+    @include notebook {
+        padding: 64px 0;
+    }
+
+    @include mobile {
+        padding-top: 400px;
+    }
+
+    @media (max-width: 475px) {
+        padding-top: 350px;
+    }
+
+    @media (max-width: 405px) {
+        padding-top: 300px;
+    }
+
+    @media (max-width: 330px) {
+        padding-top: 250px;
+    }
+
+    @media (max-width: 275px) {
+        padding-top: 200px;
+    }
     
     &__subtitle {
         margin-bottom: 24px;
@@ -8,16 +33,34 @@
 
     &__inner {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        @include notebook {
+            flex-direction: column;
+        }
     }
 
     &__img {
-        max-width: 100%;
+        @include mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &__content {
         font-family: 'Gotham';
-        margin-left: 40px;
+        max-width: 453px;
+
+        @include notebook {
+            max-width: 100%;
+        }
     }
 
     &__title {
@@ -36,6 +79,11 @@
                 margin-bottom: 8px;
             }
         }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__buttons {
@@ -45,8 +93,23 @@
     &__btn {
         padding: 12.5px 38px;
 
+        &:first-child {
+            @include mobile {
+                display: none;
+            }
+        }
+
         +.btn {
             margin-left: 24px;
+
+            @include mobile {
+                background-color: transparent;
+                color: #1E74EC;
+                display: flex;
+                justify-content: flex-end;
+                padding: 0;
+                font-weight: 700;
+            }
         }
     }
 }

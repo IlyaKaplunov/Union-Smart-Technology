@@ -2,6 +2,10 @@
     font-family: "Gotham";
     padding: 180px 0;
 
+    @include mobile {
+        padding: 96px 0 80px 0;
+    }
+
     &__title {
         max-width: 577px;
         margin-bottom: 64px;
@@ -16,6 +20,10 @@
 
     &__item {
         display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__icon {
@@ -25,12 +33,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile {
+            background: transparent;
+            min-height: 0;
+            margin-bottom: 40px;
+        }
         svg {
             width: 80px;
             height: 80px;
             fill: #fff;
             display: block;
             object-fit: cover;
+
+            @include mobile {
+                fill: #1E74EC;
+            }
         }
     }
 
@@ -45,8 +62,21 @@
         justify-content: center;
         align-items: center;
 
+        @include mobile {
+            font-family: 'Rubik';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #75788D;
+            text-align: center;
+            background-color: transparent;
+        }
+
         p {
             max-width: 206px;
+            @include mobile {
+                max-width: 100%;
+            }
         }
     }
 }

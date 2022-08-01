@@ -1,6 +1,10 @@
 .clients {
     padding: 175px 0 200px 0;
 
+    @include tablet {
+        padding: 64px 0 100px 0;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 65px;
@@ -10,5 +14,19 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 40px 35px;
+
+        @include middledesk {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        img {
+            max-width: 100%;
+        }
     }
 }

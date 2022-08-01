@@ -1,16 +1,65 @@
 .team {
     padding: 181px 0 218px 0;
     font-family: "Gotham";
+
+    @include notebook {
+        padding: 80px 0;
+    }
+
     &__inner {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         gap: 78px 44px;
+
+        @include minidesk {
+            gap: 40px;
+        }
+
+        @include mobile {
+            display: block;
+        }
     }
 
     &__item {
         grid-column: 3 span;
         &--big {
             grid-column: 6 span;
+
+            @include minidesk {
+                grid-column: 3 span;
+            }
+        }
+
+        &:not(:last-child) {
+            @include mobile {
+                margin-bottom: 40px;
+            }
+        }
+
+        @include minidesk {
+            grid-column: 6 span;
+        }
+
+        @include tablet {
+            grid-column: 12 span;
+        }
+
+        &--none {
+            @include mobile {
+                height: 0;
+                margin: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.8s ease;
+                transform: translate(0, -50);
+    
+                &._block {
+                    opacity: 1;
+                    height: 100%;
+                    transform: translate(0, 0);
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 
@@ -20,6 +69,16 @@
         line-height: 64px;
         color: #03115F;
         margin-bottom: 25px;
+
+        @include minidesk {
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        @include mobile {
+            font-size: 30px;
+            line-height: 32px;
+        }
     }
 
     &__text {
@@ -27,6 +86,17 @@
         font-weight: 325;
         font-size: 20px;
         line-height: 28px;
+
+        @include minidesk {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include mobile {
+            font-family: 'Rubik';
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__photo {
@@ -39,10 +109,16 @@
             right: 24px;
             width: 32px;
             height: 32px;
-            background: url("../img/team/social.png") center no-repeat;
+            background: url("../img/team/social.png") center / cover no-repeat;
+
+            @include mobile {
+                top: 16px;
+                right: 16px;
+            }
         }
         img {
             max-width: 100%;
+            width: 100%;
         }
     }
 
@@ -54,6 +130,12 @@
         color: #03115F;
         text-align: center;
         margin-top: 20px;
+
+        @include mobile {
+            font-family: 'Rubik';
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 
     &__prof {
@@ -63,9 +145,31 @@
         line-height: 22px;
         color: #535670;
         text-align: center;
-        margin-top: 4px;
         max-width: 282px;
-        margin: 0 auto;
+        margin: 4px auto;
+
+        @include mobile {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &__show {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: #1e74ec;
+        background: none;
+        padding: 6px 15px;
+        border: 2px solid #1e74ec;
+        transition: 0.3s ease;
+        display: none;
+
+        @include mobile {
+            display: block;
+            margin: 40px auto 0;
+        }
     }
 }
 

@@ -37,6 +37,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 body {
   font-family: Gotham;
   font-weight: 400;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .main {
@@ -68,6 +72,13 @@ body {
   text-align: center;
   min-width: 206px;
 
+  @include mobile {
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+    padding: 10px;
+  }
+
   &--fill {
     background-color: #1E74EC;
     color: #EEEFF1;
@@ -76,7 +87,15 @@ body {
   &--stroke {
     color: #1E74EC;
     border: 2px solid #1E74EC;
+
+    @include mobile {
+      border: 0;
+    }
   }
+}
+
+.center {
+  text-align: center;
 }
 
 .section-subtitle {
@@ -85,8 +104,14 @@ body {
   line-height: 32px;
   color: #35417F;
   font-weight: 350;
+
   &_w {
     color: #fff;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -99,6 +124,11 @@ body {
 
   &_w {
     color: #fff;
+  }
+
+  @include mobile {
+    font-size: 30px;
+    line-height: 32px;
   }
 }
 
@@ -115,5 +145,10 @@ body {
 
   &_w {
     color: #fff;
+  }
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

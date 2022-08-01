@@ -12,6 +12,12 @@
 
     &__logo {
         @include flex-v-center;
+
+        img {
+            @include mobile {
+                width: 40px;
+            }
+        }
     }
 
     &__text {
@@ -25,6 +31,16 @@
         color: #DDDDE2;
         font-family: "Inter";
         display: block;
+
+        @include minidesk {
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 17px;
+        }
     }
 
     &__subtitle {
@@ -32,21 +48,69 @@
         line-height: 24px;
         font-family: "Inter";
         color: #989AA9;
+
+        @include minidesk {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        @include mobile {
+            font-size: 10px;
+            line-height: 12px;
+        }
     }
 
     &__menu {
         @include flex-v-center;
+
+        @include notebook {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100vh;
+            background-color: #fff;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 26px;
+            overflow-y: auto;
+            transform: translateY(-100%);
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+                transform: translateY(0);
+            }
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__list {
         @include flex-v-center;
         margin-right: 24px;
 
+        @include notebook {
+            flex-direction: column;
+            margin-right: 0;
+            align-items: flex-start;
+            order: 2;
+            margin-top: 42px;
+            padding-left: 46px;
+        }
+
         li {
             
             &:not(:last-child) {
                 position: relative;
                 margin-right: 32px;
+
+                @include notebook {
+                    margin-right: 0;
+
+                    margin-bottom: 40px;
+                }
                 
                 &::after {
                     content: "";
@@ -56,6 +120,10 @@
                     width: 2px;
                     height: 15px;
                     background-color: #989AA9;
+
+                    @include notebook {
+                        display: none;
+                    }
                 }
             }
         }
@@ -72,6 +140,16 @@
         position: relative;
         transition: all 0.3s ease-in-out;
 
+        @include minidesk {
+            font-size: 13px;
+        }
+
+        @include notebook {
+            font-family: "Roboto";
+            font-weight: 325;
+            color: #091245;
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -81,6 +159,11 @@
             height: 2px;
             background-color: #fff;
             transition: all 0.3s ease-in-out;
+
+            @include notebook {
+                background-color: #091245;
+
+            }
         }
 
         &:hover {
@@ -91,6 +174,11 @@
                 width: 100%;
             }
         }
+    }
+
+    &__left {
+        display: flex;
+        order: 1;
     }
 
     &__lang {
@@ -122,6 +210,86 @@
         &:hover {
             svg {
                 stroke: #fff;
+            }
+        }
+    }
+
+    &__social {
+        display: none;
+        margin-top: 40px;
+
+        @include notebook {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            order: 3;
+            gap: 32px;
+            padding-left: 46px;
+        }
+
+        &-link {
+            svg {
+                width: 32px;
+                height: 32px;
+                fill: #1E74EC;
+            }
+        }
+    }
+}
+
+.burger {
+    display: none;
+    @include notebook {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        display: block;
+
+        span {
+            display: block;
+            position: absolute;
+            height: 1.5px;
+            width: 100%;
+            background: #fff;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+
+            
+            &:nth-child(1) {
+                top: 0px;
+            }
+
+            &:nth-child(2) {
+                top: 8px;
+            }
+
+            &:nth-child(3) {
+                top: 16px;
+            }
+        }
+
+        &.active {
+            span {
+                @include mobile {
+                    background-color: #A960AB;
+                }
+
+                &:nth-child(1) {
+                    top: 9px;
+                    transform: rotate(135deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                    left: -60px;
+                }
+
+                &:nth-child(3) {
+                    top: 9px;
+                    transform: rotate(-135deg);
+                }
             }
         }
     }

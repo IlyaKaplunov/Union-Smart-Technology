@@ -1,5 +1,9 @@
 .also {
     padding-bottom: 169px;
+
+    @include mobile {
+        padding-bottom: 78px;
+    }
     
     &__title {
         margin-bottom: 64px;
@@ -8,10 +12,31 @@
     &__item {
         display: flex;
         gap: 40px;
+
+        &:not(:last-child) {
+            @include minidesk {
+                margin-bottom: 64px;
+            }
+        }
+
+        
+
+        @include notebook {
+            flex-direction: column-reverse;
+            gap: 0;
+        }
     }
 
     &__content {
         max-width: 690px;
+
+        @include minidesk {
+            max-width: 550px;
+        }
+
+        @include notebook {
+            max-width: 100%;
+        }
     }
 
     &__subtitle {
@@ -20,6 +45,18 @@
         line-height: 42px;
         color: #35417F;
         margin-bottom: 24px;
+
+        @include tablet {
+            font-weight: 325;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            background: linear-gradient(130.67deg, #1E74EC 6.5%, #002984 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
     }
 
     &__desc {
@@ -28,6 +65,13 @@
         font-size: 20px;
         line-height: 28px;
         margin-bottom: 15px;
+
+        @include tablet {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: "Rubik";
+        }
     }
 
     &__list {
@@ -40,6 +84,15 @@
             position: relative;
             padding-left: 20px;
 
+            @include tablet {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 14px;
+                color: #989AA9;
+            }
+
             &::before {
                 content: "";
                 position: absolute;
@@ -48,7 +101,11 @@
                 width: 4px;
                 height: 4px;
                 border-radius: 50%;
-                background-color: #35417F;
+                background: #CDCFDF;
+
+                @include tablet {
+                    top: 4px;
+                }
             }
 
             &:not(:last-child) {
@@ -58,8 +115,18 @@
     }
 
     &__img {
+        @include minidesk {
+            width: 100%;
+        }
+        @include notebook {
+            margin-bottom: 10px;
+        }
         img {
             max-width: 100%;
+
+            @include minidesk {
+                width: 100%;
+            }
         }
     }
 }

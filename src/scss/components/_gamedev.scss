@@ -1,6 +1,9 @@
-
 .gamedev {
     padding: 180px 0;
+
+    @include tablet {
+        padding: 80px 0;
+    }
 
     &__header {
         max-width: 670px;
@@ -12,6 +15,14 @@
 
     &__text {
         margin-bottom: 64px;
+
+        @include mobile {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__inner {
@@ -21,8 +32,19 @@
     &__slider {
         padding: 0 15px;
 
+        @include tablet {
+            padding-bottom: 55px;
+        }
+
         .swiper-pagination {
             bottom: 0;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #A960AB;
+            margin: 0 12px !important;
+            width: 8px;
+            height: 8px;
         }
     }
 
@@ -31,9 +53,10 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
 
-        /* @media (max-width: 600px) {
-            display: initial;
-        } */
+        @include tablet {
+            gap: 0;
+            display: flex;
+        }
     }
 
     &__slide {
@@ -41,6 +64,10 @@
         display: flex;
         flex-direction: column;
         height: auto;
+
+        @include tablet {
+            width: 343px;
+        }
     }
 
     &__img {
@@ -53,6 +80,10 @@
 
     &__content {
         padding: 24px 34px 31px 40px;
+
+        @include notebook{
+            padding: 24px 16px 18px;
+        }
     }
 
     &__caption {
@@ -65,6 +96,11 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin-bottom: 10px;
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 
     &__desc {
@@ -73,5 +109,12 @@
         line-height: 22px;
         text-overflow: ellipsis;
         color: #535670;
+
+        @include mobile {
+            font-family: 'Rubik';
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+        }
     }
 }

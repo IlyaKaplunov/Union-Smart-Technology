@@ -8,6 +8,19 @@
         justify-content: space-between;
         margin-right: 106px;
         margin-bottom: 72px;
+
+        @include middledesk {
+            margin-right: 0px;
+        }
+
+        @include notebook {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include mobile {
+            margin-bottom: 41px;
+        }
     }
 
     &__title {
@@ -17,6 +30,12 @@
         text-transform: uppercase;
         color: #F0F0F1;
         margin-bottom: 17px;
+
+        @include mobile {
+            font-size: 12px;
+            line-height: 14px;
+            max-width: 119px;
+        }
     }
 
     &__address {
@@ -26,12 +45,26 @@
         line-height: 22px;
         color: #F0F0F1;
         font-style: normal;
+
+        @include mobile {
+            font-size: 12px;
+            line-height: 16px;
+        }
     }
 
     &__bottom {
         display: flex;
         justify-content: space-between;
         margin-right: 328px;
+
+        @include middledesk {
+            margin-right: 0px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__dev {
@@ -39,6 +72,12 @@
         font-size: 16px;
         line-height: 20px;
         color: #F0F0F1;
+
+        @include tablet {
+            order: 2;
+            font-size: 11px;
+            line-height: 14px;
+        }
     }
 
     &__policy {
@@ -47,15 +86,39 @@
         line-height: 16px;
         display: flex;
 
+        @include tablet {
+            order: 1;
+            margin-bottom: 24px;
+        }
+
         &-link {
             color: #E0E1E3;
+
             &:not(:last-child) {
                 margin-right: 32px;
+
+                @include tablet {
+                    margin-right: 0;
+                }
             }
 
+            &:last-child {
+                @include tablet {
+                    display: none;
+                }
+            }
             
             &:first-child {
                 position: relative;
+                
+                @include tablet {
+                    font-weight: 400;
+                    font-size: 11px;
+                    line-height: 14px;
+                    text-decoration-line: underline;
+                    color: #A960AB;
+                    font-family: 'Roboto';
+                }
 
                 &::after {
                     content: "";
@@ -65,6 +128,10 @@
                     width: 1px;
                     height: 14px;
                     background-color: #A3A4AB;
+
+                    @include tablet {
+                        display: none;
+                    }
                 }
             }
         }
@@ -73,9 +140,27 @@
 
 .footer-contacts {
     display: flex;
+
+    @media (max-width: 370px) {
+        flex-direction: column;
+    }
+    
     &__col {
         &:first-child {
             margin-right: 148px;
+
+            @include middledesk {
+                margin-right: 60px;
+            }
+
+            @include mobile {
+                margin-right: 18px;
+            }
+
+            @media (max-width: 370px) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
         }
     }
 
@@ -90,6 +175,11 @@
         line-height: 22px;
         color: #F0F0F1;
 
+        @include mobile {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
         &:first-child {
             margin-bottom: 4px;
         }
@@ -97,17 +187,52 @@
 }
 .footer-nav {
     display: flex;
+
+    @include notebook {
+        margin-top: 30px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+    }
+
     &__list {
+        &:not(:last-child) {
+            @include mobile {
+                margin-bottom: 24px;
+            }
+        }
+
         &:first-child {
             margin-right: 154px;
+
+            @include middledesk {
+                margin-right: 50px;
+            }
+
+            @include mobile {
+                margin-right: 0;
+            }
         }
 
         &:nth-child(2) {
             margin-right: 133px;
+            @include middledesk {
+                margin-right: 50px;
+            }
+
+            @include mobile {
+                margin-right: 0;
+            }
         }
         li {
             &:not(:last-child) {
                 margin-bottom: 16px;
+
+                @include mobile {
+                    margin-bottom: 24px;
+                }
             }
         }
     }
@@ -119,5 +244,33 @@
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #E0E1E3;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.footer-social {
+    display: none;
+    margin-top: 30px;
+
+    @include tablet {
+        display: flex;
+    }
+    
+    &__link {
+        margin: 0 21px;
+
+        @media (max-width: 370px) {
+            margin: 0 10px;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+            fill: #fff;
+        }
     }
 }
