@@ -1,13 +1,15 @@
-const showButton = document.querySelector(".team__show");
-const itemNone = document.querySelectorAll(".team__item--none");
+const showMore = document.querySelector('.team__show');
+const productsLength = document.querySelectorAll('.team__item').length;
+let items = 6;
 
-showButton.addEventListener("click", function (e) {
-  for (let item of itemNone) {
-    item.classList.toggle("_block");
-    if (item.classList.contains("_block")) {
-      showButton.innerHTML = `Свернуть`;
-    } else {
-      showButton.innerHTML = `Вся команда`;
-    }
-  }
+showMore.addEventListener('click', () => {
+	items += 3;
+	const array = Array.from(document.querySelector('.team__inner').children);
+	const visItems = array.slice(0, items);
+
+	visItems.forEach(el => el.classList.add('is-visible'));
+
+	if (visItems.length === productsLength) {
+		showMore.style.display = 'none';
+	}
 });

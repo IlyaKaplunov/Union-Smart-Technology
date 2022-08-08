@@ -25,6 +25,10 @@
             stroke-width: 2px;
         }
 
+        @include mobile {
+            display: none;
+        }
+
         position: absolute;
         top: 41%;
         z-index: 10;

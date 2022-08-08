@@ -36,6 +36,14 @@
             }
         }
 
+        &:nth-child(n + 4) {
+            display: none;
+        }
+
+        &.is-visible {
+            display: block;
+        }
+
         @include minidesk {
             grid-column: 6 span;
         }
@@ -44,23 +52,7 @@
             grid-column: 12 span;
         }
 
-        &--none {
-            @include mobile {
-                height: 0;
-                margin: 0;
-                overflow: hidden;
-                opacity: 0;
-                transition: all 0.8s ease;
-                transform: translate(0, -50);
-    
-                &._block {
-                    opacity: 1;
-                    height: 100%;
-                    transform: translate(0, 0);
-                    margin-bottom: 40px;
-                }
-            }
-        }
+
     }
 
     &__title {
