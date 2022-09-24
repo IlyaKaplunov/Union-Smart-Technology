@@ -37,7 +37,9 @@
         }
 
         &:nth-child(n + 4) {
-            display: none;
+            @include mobile {
+                display: none;
+            }
         }
 
         &.is-visible {
@@ -51,8 +53,6 @@
         @include tablet {
             grid-column: 12 span;
         }
-
-
     }
 
     &__title {
