@@ -178,12 +178,14 @@
 
     &__left {
         display: flex;
+        align-items: center;
         order: 1;
     }
 
     &__lang {
         position: relative;
         margin-right: 24px;
+
         &::after {
             content: "";
             position: absolute;
@@ -197,6 +199,7 @@
 
     &__search {
         margin-left: 26px;
+
         svg {
             width: 28px;
             height: 28px;
