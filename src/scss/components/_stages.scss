@@ -115,7 +115,6 @@
 
         @include mobile {
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
     }
@@ -127,6 +126,7 @@
         color: #75788D;
         max-width: 242px;
         margin-bottom: 15px;
+        margin-right: 45px;
 
         @include mobile {
             font-family: 'Roboto';
@@ -144,18 +144,16 @@
         color: #A960AB;
         margin-top: 15px;
         position: relative;
-        display: block;
+        display: inline-block;
+
+        @include mobile {
+            display: none;
+        }
         
         &--mob {
             display: none;
             @include mobile {
                 display: block;
-            }
-        }
-
-        &:first-child {
-            @include mobile {
-                display: none;
             }
         }
 

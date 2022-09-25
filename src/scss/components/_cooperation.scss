@@ -13,10 +13,12 @@
 
     &__wrapper {
         position: relative;
+        margin: 0 -15px;
     }
 
     &__arrow {
         background-color: transparent;
+        
         svg {
             width: 12px;
             height: 28px;
@@ -44,13 +46,11 @@
     }
 
     &__slider {
-        padding: 0 0 90px;
+        padding: 0 15px 90px;
         
         .swiper-slide {
-           
             background: #F8F9F9;
             height: auto;
-            
         }
 
         .swiper-pagination {
@@ -66,8 +66,6 @@
         .swiper-pagination-bullet-active {
             background: #A960AB;
         }
-
-        
     }
 
     &__img {
