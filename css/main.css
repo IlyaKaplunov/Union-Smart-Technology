@@ -81,7 +81,7 @@
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/../fonts/InterSemibold.woff2") format("woff2");
+  src: url("../fonts/../fonts/InterSemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -335,7 +335,7 @@ body.lock {
   font-size: 24px;
   line-height: 29px;
   color: #DDDDE2;
-  font-family: "Inter";
+  font-family: Inter;
   display: block;
 }
 @media (max-width: 1250px) {
@@ -2471,6 +2471,7 @@ body.lock {
 }
 .cooperation__wrapper {
   position: relative;
+  margin: 0 -15px;
 }
 .cooperation__arrow {
   background-color: transparent;
@@ -2498,7 +2499,7 @@ body.lock {
   right: -52px;
 }
 .cooperation__slider {
-  padding: 0 0 90px;
+  padding: 0 15px 90px;
 }
 .cooperation__slider .swiper-slide {
   background: #F8F9F9;
@@ -2762,9 +2763,6 @@ body.lock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2777,6 +2775,7 @@ body.lock {
   color: #75788D;
   max-width: 242px;
   margin-bottom: 15px;
+  margin-right: 45px;
 }
 @media (max-width: 576px) {
   .stages__road {
@@ -2794,7 +2793,12 @@ body.lock {
   color: #A960AB;
   margin-top: 15px;
   position: relative;
-  display: block;
+  display: inline-block;
+}
+@media (max-width: 576px) {
+  .stages__link {
+    display: none;
+  }
 }
 .stages__link--mob {
   display: none;
@@ -2802,11 +2806,6 @@ body.lock {
 @media (max-width: 576px) {
   .stages__link--mob {
     display: block;
-  }
-}
-@media (max-width: 576px) {
-  .stages__link:first-child {
-    display: none;
   }
 }
 @media (max-width: 576px) {
